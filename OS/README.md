@@ -8,6 +8,7 @@
 ####  Implement Proirity Scheduling and Round Robin Scheduling
 ####  Implement LJF and LRTF
 ####  Implement Banker's Algorithm to prevent DeadLock
+#### Synchronisation classic problem
 
 # WorkFlow :-
 * AIM:
