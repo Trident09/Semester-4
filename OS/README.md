@@ -1,15 +1,16 @@
-# OS
+# OS 
 
-## Implement basic commands of Linux
+### Experiments for final
+#### Implement  basic commands of linux atleast 10
+#### Implement process related fork system call
+####  Implementation of FCFS
+####  Implement SJF and SRTF
+####  Implement Proirity Scheduling and Round Robin Scheduling
+####  Implement LJF and LRTF
+####  Implement Banker's Algorithm to prevent DeadLock
 
-## Implement process related system call (fork system call)
-
-## Implementation of fcfs
-
-## Implement sjf and srtf
-
-## Implement priority and Round Robin scheduling
-
-## Implement ljf and lrtf
-
-## Implement bankers algo to prevent deadlock
+# WorkFlow :-
+* AIM:
+* PSEUDOCODE:
+* INPUT / OUTPUT :
+* FLOWCHART : 
