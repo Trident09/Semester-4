@@ -41,6 +41,6 @@ signed main()
 
     triplet ans = extendedEuclid(a, b);
     cout << "gcd = " << ans.gcd << endl;
-    cout << "x = " << ans.x << endl;
-    cout << "y = " << ans.y << endl;
+    cout << "s = " << ans.x << endl;
+    cout << "t = " << ans.y << endl;
 }
