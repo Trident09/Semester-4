@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 class Process
 {
@@ -19,37 +19,33 @@ public:
         ct = 0;
     }
 };
-
 bool processCmpAT(Process p1, Process p2)
-{
-    // to Sort According to AT
+{// to Sort According to AT
     if (p1.at < p2.at)
         return true;
     if (p1.at == p2.at)
-        return p1.pid < p2.pid; //if arrival times are equal compare pid
+        return p1.pid < p2.pid;//if arrival times are equal compare pid
     return false;
 }
 bool processCmpPid(Process p1, Process p2)
 {
-    // to Sort According to AT
     if (p1.pid < p2.pid)
         return true;
     return false;
 }
 bool processCmpBT(Process p1, Process p2)
 {
-    // to Sort According to AT
     if (p1.bt > p2.bt)
         return true;
     if (p1.bt == p2.bt)
-        return p1.pid < p2.pid; //if arrival times are equal compare pid
+        return p1.pid < p2.pid;//if arrival times are equal compare pid
     return false;
 }
 void display(vector<Process> &, int);
 void display(vector<Process> &v, int n)
 {
     int i = 0;
-    cout << "Pid \t AT \t BT \t CT \t TAT \t WT" << endl;
+    cout << "Pid \tAT \tBT \tCT \tTAT \tWT" << endl;
     for (i = 0; i < n; i++)
     {
         cout << v[i].pid << "\t" << v[i].at << "\t" << v[i].bt << "\t" << v[i].ct << "\t" << v[i].tat << "\t" << v[i].wt << endl;
@@ -80,29 +76,24 @@ int main()
         {
             if (incoming[j].at <= clock)
             {
-                // erase from incoming , put it into ready for processing
                 ready.push_back(incoming[j]);
                 incoming.erase(incoming.begin() + j);
                 j--;
             }
         }
-
         if (ready.empty())
         {
             clock++;
         }
         else
-        {
-            // process ready and calculate ct
+        {   
             sort(ready.begin(), ready.end(), processCmpBT);
             clock += ready[0].bt;
-            //instead of following complicated if else I could do ct = clock ;
             ready[0].ct = clock;
             ready[0].tat = ready[0].ct - ready[0].at;
             ready[0].wt = ready[0].tat - ready[0].bt;
             tsum += ready[0].tat;
             wsum += ready[0].wt;
-
             completed.push_back(ready[0]);
             ready.erase(ready.begin());
         }
@@ -111,7 +102,7 @@ int main()
     double wavg = wsum / n;
     sort(completed.begin(), completed.end(), processCmpPid);
     display(completed, n);
-    cout << "Tsum = " << tsum << " \t WT sum =" << wsum << endl;
-    cout << "Tavg = " << tavg << " \t WT avg =" << wavg;
+    cout << "TAT = " << tsum << " \t WT =" << wsum << endl;
+    cout << "Avg TAT = " << tavg << " \t Avg WT  =" << wavg;
     return 0;
 }
