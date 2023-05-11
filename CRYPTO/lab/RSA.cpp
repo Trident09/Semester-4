@@ -77,8 +77,7 @@ int main()
             e++;
     }
 
-    int k = 2;
-    double d = (1 + (k * phi)) / e;
+    double d = (1 + (2 * phi)) / e;
 
     cout << "d = " << d << endl;
 
