@@ -10,6 +10,7 @@
 #### Implement AES
 #### Implement RSA
 #### Implement Diffi Hellman
+#### Elgamal Crypto System
 
 # WorkFlow :-
 * AIM:
