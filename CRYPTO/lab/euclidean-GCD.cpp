@@ -15,6 +15,7 @@ int gcd(int a, int b)
 
 int main()
 {
+    cout << "Euclidean Algorithm to find the GCD between two numbers " << endl ;
     int num1, num2;
     cout << "Enter two numbers: ";
     cin >> num1 >> num2;

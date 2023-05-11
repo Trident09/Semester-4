@@ -54,6 +54,7 @@ int multiplicativeInverse(int a, int m)
 
 signed main()
 {
+    cout << "Modular Multiplicative Inverse using Extended Euclidean" << endl;
     int a, m;
     cout << "Enter a: ";
     cin >> a;

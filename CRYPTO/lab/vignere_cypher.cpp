@@ -69,6 +69,7 @@ string encryptVigenere(string plaintext, string keyword)
 
 int main()
 {
+    cout << "Vigenere Cypher" << endl;
     string plaintext, kshift;
 
     cout << "Enter plaintext: ";
@@ -77,7 +78,7 @@ int main()
     cout << "Enter keyword: ";
     cin >> kshift;
 
-    cout << "Ciphertext: " << encryptVigenere(plaintext, kshift);
+    cout << "Ciphertext: " << encryptVigenere(plaintext, kshift) << endl;
 
     return 0;
 }

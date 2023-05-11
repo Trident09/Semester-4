@@ -13,6 +13,7 @@ long long int power(long long int a, long long int b, long long int p)
 }
 
 int main() {
+    cout << "Diffie Hellman Key Exchange" << endl ;
     long long int p, g, a, b, A, B, sA, sB;
     cout << "Enter the value of p: ";
     cin >> p;

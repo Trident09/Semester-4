@@ -35,6 +35,7 @@ triplet extendedEuclid(int a, int b)
 
 signed main()
 {
+    cout << "Extended Euclidean Algorithm" << endl;
     int a, b;
     cout << "Enter a and b: ";
     cin >> a >> b;

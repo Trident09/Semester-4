@@ -182,6 +182,7 @@ string decrypt(string ct, int n)
 
 int main(void)
 {
+    cout << "Hill cipher" << endl ;
     string pt;
     int n;
 

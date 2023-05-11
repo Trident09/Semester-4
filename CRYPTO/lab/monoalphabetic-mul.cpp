@@ -89,6 +89,7 @@ string decrypt(string encrypted_message, string key, int b)
 
 int main()
 {
+    cout << "Caesar Cipher : Monoalphabetic Multiplicative" << endl;
     string message;
     string key;
     int b;
