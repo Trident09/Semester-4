@@ -4,11 +4,7 @@
 using namespace std;
 #define int long long
 const int N = 1e5 + 5, MOD = 1e9 + 7;
-// ax + by = gcd(a, b)
-//gcd(d, o) = d;
 
-// ax + 0 = 0 -> x + 1
-//y = 0
 struct triplet
 {
     int x, y, gcd;
@@ -33,12 +29,35 @@ triplet extendedEuclid(int a, int b)
     return ans;
 }
 
+int multiplicativeInverse(int a, int b)
+{
+    triplet temp = extendedEuclid(a, b);
+    if (temp.gcd != 1)
+    {
+        return -1;
+    }
+    else
+    {
+        return temp.x;
+    }
+}
+
 signed main()
 {
-    cout << "Extended Euclidean Algorithm" << endl;
+    cout << "Extended Euclidean Algorithm to find modular inverse of two numbers" << endl;
     int a, b;
     cout << "Enter a and b: ";
     cin >> a >> b;
+
+    int inv = multiplicativeInverse(a, b);
+    if (inv == -1)
+    {
+        cout << "No inverse exists" << endl;
+    }
+    else
+    {
+        cout << "Multiplicative inverse of " << a << " modulo " << b << " is " << inv << endl;
+    }
 
     triplet ans = extendedEuclid(a, b);
     cout << "gcd = " << ans.gcd << endl;
