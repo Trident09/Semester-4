@@ -7,7 +7,6 @@
 #### Implement Caesar Cipher + Add + Mulitplication
 #### Implement Hill & Vigenere Cipher
 #### Implement DES for encrypt & decrypt
-#### Implement AES
 #### Implement RSA
 #### Implement Diffi Hellman
 #### Elgamal Crypto System
