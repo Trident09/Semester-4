@@ -1,19 +1,29 @@
-namespace fibonacci
+﻿namespace fibonacci
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int t1 = 0, t2 = 1, next_term = t1 + t2;
-            Console.WriteLine(t1);
-            Console.WriteLine(t2);
-            for (int i = 1; i < 10; i++)
-            {
-                t1 = t2;
-                t2 = next_term;
-                next_term = t1 + t2;
-                Console.WriteLine(t1);
+            Fibonnaci();
+        }
+        static void Fibonnaci(){
+        Console.WriteLine("Enter the number of sequence");
+        int num = Convert.ToInt32(Console.ReadLine());
+        int a = 0;
+        int b = 1;
+        int c = 0;      
+        for ( int i = 0 ; i < num ; i++){
+            c = a + b;
+            a = b;
+            b = c;
+            if (i == num - 1){
+                Console.Write(c+"\n");
+            }
+            else{
+                Console.Write(c + " , ");
             }
         }
+        
+    }
     }
 }
