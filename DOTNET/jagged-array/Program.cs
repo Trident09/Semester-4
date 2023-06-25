@@ -15,7 +15,7 @@
             int[][] arr = new int[rows][];
             for (int i = 0; i < rows; i++)
             {
-                Console.WriteLine("Enter the numbers in the " + (i + 1) + "th row ");
+                Console.WriteLine("Enter the numbers in row " + (i + 1));
                 int size = Convert.ToInt32(Console.ReadLine());
                 arr[i] = new int[size];
                 for (int j = 0; j < size; j++)
