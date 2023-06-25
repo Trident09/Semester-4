@@ -1,0 +1,1 @@
+; Decide whether the parity of given number is even or odd if parity is even or odd if parity is even set DL = 0 else DL = 1. The given number may be multibyte number.
