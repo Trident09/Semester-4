@@ -35,7 +35,10 @@ namespace temperature {
                     break;
                 }
                 default:
+                {
+                    Console.WriteLine("Invalid Choice");
                 break;
+                }
             }
 
             
